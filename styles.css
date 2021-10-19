@@ -33,6 +33,25 @@ nav a:hover {
   padding-top: 39px;
 }
 
+@media screen and (max-width: 375px) {
+  header {
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+  }
+  .filtre {
+    flex-direction: column;
+  }
+
+  #logo {
+    padding-left: 70px;
+  }
+  nav a:hover {
+    color: #0065fc;
+    border-bottom: 2px solid #0065fc;
+    border-top: transparent;
+    padding-bottom: 15px;
+  }
+}
 /*==============================Bouton Recherche===================================*/
 
 .search {
@@ -69,15 +88,31 @@ input::placeholder {
   transform: scale(1.05);
 }
 
-@media screen and (max-width:768px) {
-  #Recherche { 
+.fas.fa-search {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #Recherche {
     text-align: center;
   }
   .search {
     justify-content: center;
   }
-  }
+}
 
+@media (max-width: 375px) {
+  .button {
+    display: initial;
+  }
+  .button .rechercher {
+    display: none;
+  }
+  .fas.fa-search {
+    background-color: inherit;
+    display: inline;
+  }
+}
 
 /*==============================Filtre===================================*/
 
@@ -144,14 +179,40 @@ input::placeholder {
   width: 100%;
   gap: 10px;
   padding: 10px;
-  
+}
+@media (max-width: 768px) {
+  .Bloc1 {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  .Bloc1 {
+    flex-direction: column-reverse;
+  }
 }
 
 /*============================Hébergement===================================*/
 .Blocencart {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 1px;
+}
+
+@media (max-width: 768px) {
+  .Blocencart {
+    justify-content: center;
+    width: 100%;
+    gap: 100px;
+  }
+}
+
+@media (max-width: 375px) {
+  .Blocencart {
+    width: 300%;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .Hébergement {
@@ -161,6 +222,7 @@ input::placeholder {
   flex-basis: 65%;
   padding: 20px;
   gap: 20px;
+  border-radius: 20px;
 }
 
 .Hébergement h3 {
@@ -170,15 +232,11 @@ input::placeholder {
 
 .Encart {
   background-color: white;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px;
   padding: 5px;
   width: 33%;
-  width: 190px;
   box-shadow: 6px 5px 5px lightgrey;
 }
-
-
-
 
 .Encart .nomhôtel {
   font-weight: bold;
@@ -189,12 +247,13 @@ input::placeholder {
 }
 
 .Encart img {
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
   width: 100%;
   height: 200px;
-  
+  object-fit: cover;
 }
-.Encart :hover {
+
+.Blocencart .Encart:hover {
   transform: scale(1.05);
 }
 
@@ -214,6 +273,14 @@ input::placeholder {
   padding: 0.5px;
 }
 
+.Hébergement a {
+  /*==Texte==*/
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 20px;
+}
+
 /*============================Populaire===================================*/
 .Populaire {
   flex: 1;
@@ -221,6 +288,7 @@ input::placeholder {
   background-color: #f2f2f2;
   padding: 20px;
   gap: 20px;
+  border-radius: 20px;
 }
 
 .ensembletitre {
@@ -248,36 +316,59 @@ input::placeholder {
 
 .Encartpopulaire img {
   width: 50%;
-  width:130px;
+  width: 130px;
   border-radius: 10px 0px 0px 10px;
   object-fit: cover;
-  
 }
 
-
-
-.Encartpopulaire :hover {
+.Populaire .Encartpopulaire:hover {
   transform: scale(1.05);
 }
-
 
 .Encartpopulaire .nomhôtel {
   padding: 10px;
 }
-
 
 .Blocpopulaire .nomhôtel span {
   font-weight: bold;
 }
 
 .Blocpopulaire .nomhôtel .étoile {
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
+@media (max-width: 768px) {
+  .Blocpopulaire .nomhôtel .étoile {
+    padding-top: 10px;
+  }
+  .Populaire {
+    width: 100%;
+  }
+  .Encartpopulaire img {
+    width: 270px;
+  }
+}
 
+@media (max-width: 375px) {
+  .Encartpopulaire img {
+    width: 140px;
+  }
+  .Bloc2 {
+    flex-direction: column;
+  }
+  .Blocactivité {
+    flex-direction: column-reverse;
+    width: 215%;
+  }
+  .longue {
+    height: 200px;
+  }
+  .petite {
+    width: 200px;
+  }
+}
 
 /*================Activité================*/
-
 .Bloc2 {
   display: flex;
   flex-wrap: wrap;
@@ -296,7 +387,6 @@ input::placeholder {
   border-radius: 10px 10px 0px 0px;
   object-fit: cover;
 }
-
 
 .Blocactivité {
   display: flex;
@@ -321,11 +411,9 @@ input::placeholder {
 }
 
 .longue img {
-  height : 460px;
+  height: 460px;
   object-fit: cover; /*s'adapte au container*/
-  
 }
-
 
 .petite {
   display: flex;
@@ -339,21 +427,27 @@ input::placeholder {
 
 .petite img {
   height: 200px;
-  
 }
+
 .petite span {
   margin: 20px;
   font-weight: bold;
 }
 
-.Hébergement a {
-  /*================Texte================*/
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  margin: 20px;
+@media (max-width: 375px) {
+  .Blocactivité {
+    width: 760px;
+  }
+
+.longue {
+  flex-direction :row;
+  height: 265px;
 }
 
+.longue img {
+  height: 200px;
+}
+}
 
 /*============================Footer====================================*/
 footer {
@@ -378,82 +472,8 @@ footer li {
   padding-bottom: 20px;
 }
 
-/*============================Responsive====================================*/
-
-
-
-
-
-
-/* Tablette */
-
-
-
-
-
-  
-
-}
-/*
-footer ul {
-  padding-right: 140px;
-}
-  
-
-
-/*mobile version*/
-@media screen and (max-width: 375px) {
-  header {
-    flex-direction: column;
-    border-bottom : 1px solid grey;
-  }
-  .filtre {
-    flex-direction: column;
-  }
-  .Bloc1 {
-    flex-direction: column-reverse;
-  }
-  .Populaire, .Encart {
-    width: 100%;
-  }
-  .Blocactivité, .longue, .petite {
-  width : 100%;
-  }
-  nav a:hover {
-    color: #0065fc;
-    border-bottom: 1px solid #0065fc;
-    border-top: none;
-  }
-    
-  }
-  /*
-  ul a{
-    margin-right : none;
-    justify-content: center;
-  }
-  .logo {
-    justify-content : center;
-    align-items : center;
-  }
-  
-  nav a:hover {
-    border-top: none;
-    border-bottom: 1px solid #0065fc;
-    padding-bottom: 17px;
-  }
-
-  .button {
-    display: none;
-  }
-
-  .fas fa-search {
-    display: inline;
-  }
-  /*pour le téléphone
-
-
-  footer {
-    display: block;
-    padding: 10px;
+@media (max-width: 768px) {
+  footer div {
+    padding-right: 20px;
   }
 }
