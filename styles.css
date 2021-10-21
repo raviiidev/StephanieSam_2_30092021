@@ -344,6 +344,10 @@ input::placeholder {
 }
 
 @media (max-width: 375px) {
+
+  .Populaire {
+    width :100%
+  }
   .Encartpopulaire img {
     width: 140px;
   }
@@ -422,7 +426,6 @@ input::placeholder {
 @media (max-width: 768px) {
   .Blocactivité {
     flex-direction : column;
-
     width: 100%;
   }
 
@@ -440,27 +443,6 @@ input::placeholder {
   width: 100%;
 }
 }
-
-@media (max-width: 375px) {
-  .Blocactivité {
-    width: 760px;
-  }
-
-.longue {
-  flex-direction :row;
-  width: 100%;
-  height: 265px;
-}
-
-.longue img {
-  height: 200px;
-}
-
-.petite {
-  width: 100%;
-}
-}
-
 
 /*============================Footer====================================*/
 footer {
