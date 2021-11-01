@@ -22,7 +22,7 @@ header {
   justify-content: space-around;
 }
 
-@media (max-width: 765px) {
+@media (max-width: 768px) {
   .navigation {
     flex-basis: 100%;
   }
@@ -38,7 +38,7 @@ header {
   padding: 40px;
 }
 
-@media (max-width: 765px) {
+@media (max-width: 768px) {
   .sousmenu {
     display: flex;
     flex-basis: 50%;
@@ -54,7 +54,7 @@ header {
   cursor: pointer;
 }
 
-@media (max-width: 765px) {
+@media (max-width: 768px) {
   .sousmenu:hover {
     border-top: 2px solid transparent;
     border-bottom: 2px solid #0065fc;
@@ -238,6 +238,12 @@ i {
   border-radius: 20px;
 }
 
+@media (max-width : 768px){
+  .hebergement {
+    background-color: white;
+  }
+}
+
 .hebergement h3 {
   margin: 20px;
 }
@@ -305,7 +311,7 @@ i {
 @media (max-width: 768px) {
   .encart img {
     object-fit: cover;
-    height: 250px;
+    height: 220px;
   }
 }
 
@@ -436,14 +442,14 @@ i {
 .bloc2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 30px;
   flex-wrap: wrap;
   padding: 10px;
 }
 
 .colonne {
-  width: 200px;
+  width: 24%;
   height: 500px;
 }
 .bloc-photo {
@@ -466,7 +472,7 @@ i {
 
 .petite img {
   width: 100%;
-  height: 150px;
+  height: 180px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
@@ -485,7 +491,7 @@ h4 {
   .bloc2 {
     flex-direction: column;
     align-content: space-between;
-    gap: 1em;
+    gap: 10px;
   }
   .colonne {
     flex-direction: column;
@@ -494,9 +500,8 @@ h4 {
   }
   .colonne2 {
     height: auto;
-    gap: 1em;
+    gap: 10px;
   }
-
   .longue img {
     height: 130px;
   }
@@ -507,24 +512,24 @@ h4 {
 /*============================Footer====================================*/
 
 .footer {
-display:flex;
-justify-content: space-around;
-flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   background-color: #f2f2f2;
-  padding-top: 2em;
+  padding-top: 10px;
   width: 100%;
 }
 .pieddepage {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 2em;
+  margin-bottom: 10px;
 }
 
 .pieddepage a {
-  margin-top: 1em;
+  margin-top: 10px;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 .pieddepage a:hover {
   font-weight: bold;
@@ -535,12 +540,13 @@ flex-wrap: wrap;
 
 @media (max-width: 768px) {
   .footer {
-    margin-top:2em;
+    margin-top: 10px;
     flex-direction: column;
-    padding:10px;
+    padding: 10px;
   }
+  .pieddepage {
+    margin-bottom: 30px;}
 
-  
   .pieddepage a {
     font-size: 14px;
     letter-spacing: 0.235px;
