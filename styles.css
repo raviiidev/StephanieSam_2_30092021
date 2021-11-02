@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /*============================Général====================================*/
 
 * {
@@ -107,7 +109,7 @@ i {
 .button {
   color: white;
   font-weight: bold;
-  background-color:#0065fc;
+  background-color: #0065fc;
   border-radius: 0 10px 10px 0;
   padding: 0 20px;
   border: none;
@@ -238,7 +240,7 @@ i {
   border-radius: 20px;
 }
 
-@media (max-width : 768px){
+@media (max-width: 768px) {
   .hebergement {
     background-color: white;
   }
@@ -545,7 +547,8 @@ h4 {
     padding: 10px;
   }
   .pieddepage {
-    margin-bottom: 30px;}
+    margin-bottom: 30px;
+  }
 
   .pieddepage a {
     font-size: 14px;
