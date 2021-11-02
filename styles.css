@@ -265,7 +265,7 @@ i {
   .blocencart {
     gap: 20px;
     flex-direction: column;
-    width: 300%;
+    width : 100%;
   }
 }
 
@@ -315,7 +315,10 @@ i {
 @media (max-width: 768px) {
   .encart img {
     object-fit: cover;
-    height: 220px;
+    height: 220px;}
+
+  .encart {
+    width: 100%;
   }
 }
 
